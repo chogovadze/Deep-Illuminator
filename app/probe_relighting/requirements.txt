@@ -1,0 +1,7 @@
+torch
+torchvision
+pyyaml
+streamlit
+tqdm
+test-tube
+pytorch-lightning

@@ -1,0 +1,90 @@
+model: 'probe_relighting'
+dataset: 'MID_dataset'
+batch_size: 1
+epochs: 100
+
+dataset_opt:
+  mid_style: 'probes' 
+  blend: True
+  
+
+model_opt:
+  downsampler: 'DownBPB'
+  upsampler: 'UpBPB'
+  featblock: 'DualConv'
+  learning_rate: 0.0002
+
+
+    # ------------------------------------------------------------------
+# Fine Tuning
+  Conv2d:
+    stride: 1
+    padding: 1
+    kernel: 3
+    activation: 'elu'
+    norm: 'instance' 
+
+  HeadBlock:
+    stride: 1
+    padding: 1
+    kernel: 3
+    activation: 'tanh'
+
+# Fine-tuning within the upsampling and downsampling blocks
+  UpTranspose:
+    stride: 2
+    padding: 1
+    kernel: 4
+    activation: 'elu'
+    norm: 'instance'
+
+  DownStride:
+    stride: 2
+    padding: 1
+    kernel: 3
+    activation: 'elu'
+    norm: 'instance'
+# Fine-tuning for BackPrjBlock upsamplers and downsampler 
+  UpBPB: 
+    Conv2d:
+      stride: 1
+      padding: 0
+      kernel: 1
+      activation: 'elu'
+      norm: 'instance' 
+
+    UpTranspose:
+      stride: 2
+      padding: 1
+      kernel: 4
+      activation: 'elu'
+      norm: 'instance'
+
+    DownStride:
+      stride: 2
+      padding: 1
+      kernel: 3
+      activation: 'elu'
+      norm: 'instance'
+
+  DownBPB: 
+    Conv2d:
+      stride: 1
+      padding: 0
+      kernel: 1
+      activation: 'elu'
+      norm: 'instance' 
+
+    UpTranspose:
+      stride: 2
+      padding: 1
+      kernel: 4
+      activation: 'elu'
+      norm: 'instance'
+
+    DownStride:
+      stride: 2
+      padding: 1
+      kernel: 3
+      activation: 'elu'
+      norm: 'instance'
