@@ -20,7 +20,7 @@ Once you have the Deep Illuminator image run the following command to launch the
 ```
 docker run -it --rm  --gpus all \
 -p 8501:8501 --entrypoint streamlit \ 
-deep-illuminator run streamlit/streamlit_app.py
+kartvel/deep-illuminator run streamlit/streamlit_app.py
 ```
 You will be able to interact with it on `localhost:8501`. 
 Note: If you do not have NVIDIA gpu support enabled for docker simply remove the `--gpus all` option.
@@ -31,7 +31,7 @@ It is possible to quickly generate multiple variants for images contained in a d
 docker run -it --rm --gpus all \                                                                                               ─╯
 -v /path/to/input/images:/app/probe_relighting/originals \
 -v /path/to/save/directory:/app/probe_relighting/output \
-deep-illuminator --[options]
+kartvel/deep-illuminator --[options]
 ```
 
 #### Options
