@@ -74,4 +74,4 @@ Please read the following for other options: [instructions](app/)
 
 ### Acknowledgment
 
-The developpement of the VAE for the visualzier was made possible by the [PyTorch-VAE](https://github.com/AntixK/PyTorch-VAE) repository. 
+The developpement of the VAE for the visualizer was made possible by the [PyTorch-VAE](https://github.com/AntixK/PyTorch-VAE) repository. 
