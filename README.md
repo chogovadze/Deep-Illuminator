@@ -1,7 +1,7 @@
 # Deep Illuminator 
 
 Deep Illuminator is a data augmentation tool designed for image relighting. It can be used to easily and efficiently generate a wide range of illumination variants of a single image. It has been tested with several datasets and models and has been shown to succesfully improve performance. 
-It has a built in visualizer created with [Steamlit](https://github.com/streamlit/streamlit) to preview how the target image can be relit. 
+It has a built in visualizer created with [Streamlit](https://github.com/streamlit/streamlit) to preview how the target image can be relit. 
 
 ## Example Augmentations
 <p align="center">
