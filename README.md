@@ -5,7 +5,7 @@ It has a built in visualizer created with [Streamlit](https://github.com/streaml
 
 ## Example Augmentations
 <p align="center">
-  <img src=assets/combined.gif>
+  <img src=./assets/combined.gif>
 </p>
 
 ## Usage
