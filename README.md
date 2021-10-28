@@ -75,3 +75,19 @@ Please read the following for other options: [instructions](app/)
 ### Acknowledgment
 
 The developpement of the VAE for the visualizer was made possible by the [PyTorch-VAE](https://github.com/AntixK/PyTorch-VAE) repository. 
+
+
+### Bibtex
+
+If you use this code in your project, please consider citing the following paper:
+
+```bibtex
+@misc{chogovadze2021controllable,
+      title={Controllable Data Augmentation Through Deep Relighting}, 
+      author={George Chogovadze and Rémi Pautrat and Marc Pollefeys},
+      year={2021},
+      eprint={2110.13996},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
+```
